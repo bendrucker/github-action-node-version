@@ -1,0 +1,23 @@
+{
+  "name": "github-action-node-version",
+  "version": "1.0.0",
+  "description": "Get the Node.js version an action uses, to test it with the same version",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "build": "ncc build index.js -o dist"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "es-main": "^1.3.0",
+    "yaml": "^2.4.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  }
+}

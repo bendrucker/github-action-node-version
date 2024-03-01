@@ -1,0 +1,10 @@
+name: GitHub Action Node Version
+description: Get the Node.js version an action uses, to test it with the same version
+inputs:
+  path:
+    description: 'Path to the action.yml file'
+    required: true
+    default: './action.yml'
+runs:
+  using: node20
+  main: 'dist/index.js'
