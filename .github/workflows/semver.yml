@@ -1,4 +1,4 @@
-name: Update semver tags
+name: semver
 on:
   push:
     branches-ignore:
@@ -6,8 +6,10 @@ on:
     tags:
       - 'v*.*.*'
 jobs:
-  semver:
+  update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: haya14busa/action-update-semver@v1
