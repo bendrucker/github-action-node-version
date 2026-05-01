@@ -36011,12 +36011,12 @@ __nccwpck_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: stripExt
 
+;// CONCATENATED MODULE: external "module"
+const external_module_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("module");
 // EXTERNAL MODULE: external "path"
 var external_path_ = __nccwpck_require__(1017);
 // EXTERNAL MODULE: external "process"
 var external_process_ = __nccwpck_require__(7282);
-;// CONCATENATED MODULE: external "module"
-const external_module_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("module");
 // EXTERNAL MODULE: external "url"
 var external_url_ = __nccwpck_require__(7310);
 ;// CONCATENATED MODULE: ./node_modules/es-main/main.js
@@ -36046,7 +36046,13 @@ function stripExt(name) {
  * @return {boolean} The module was run directly with node.
  */
 function esMain(meta) {
-  if (!meta || !external_process_.argv[1]) {
+  if (!meta) {
+    return false;
+  }
+  if ('main' in meta) {
+    return !!meta.main;
+  }
+  if (!external_process_.argv[1]) {
     return false;
   }
 
