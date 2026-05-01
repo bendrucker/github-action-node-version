@@ -36011,6 +36011,8 @@ __nccwpck_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: stripExt
 
+;// CONCATENATED MODULE: external "module"
+const external_module_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("module");
 // EXTERNAL MODULE: external "path"
 var external_path_ = __nccwpck_require__(6928);
 // EXTERNAL MODULE: external "process"
@@ -36046,7 +36048,13 @@ function stripExt(name) {
  * @return {boolean} The module was run directly with node.
  */
 function esMain(meta) {
-  if (!meta || !external_process_.argv[1]) {
+  if (!meta) {
+    return false;
+  }
+  if ('main' in meta) {
+    return !!meta.main;
+  }
+  if (!external_process_.argv[1]) {
     return false;
   }
 
