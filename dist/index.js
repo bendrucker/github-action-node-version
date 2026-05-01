@@ -36017,8 +36017,6 @@ const external_module_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.
 var external_path_ = __nccwpck_require__(6928);
 // EXTERNAL MODULE: external "process"
 var external_process_ = __nccwpck_require__(932);
-;// CONCATENATED MODULE: external "module"
-const external_module_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("module");
 // EXTERNAL MODULE: external "url"
 var external_url_ = __nccwpck_require__(7016);
 ;// CONCATENATED MODULE: ./node_modules/es-main/main.js
