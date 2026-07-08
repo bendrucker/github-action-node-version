@@ -1,3 +1,6 @@
+# Action build output, produced at release time by JasonEtco/build-and-tag-action
+dist
+
 # Logs
 logs
 *.log
